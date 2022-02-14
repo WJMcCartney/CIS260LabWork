@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class problemTwoAnagrams {
 	public static void main(String[] Args) {
-		ArrayList<Character> comparativeWordList = new ArrayList<Character>(); 
+		ArrayList<Character> comparativeWordList = new ArrayList<Character>();
 		ArrayList<Character> anagramWordList = new ArrayList<Character>();
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter a word here: ");
@@ -54,7 +54,8 @@ public class problemTwoAnagrams {
 				} else {
 					System.out.println("The word " + anagramWord + " and the word " + comparativeWord
 							+ " is not an anagram because the letter " + currentComparativeLetterChar
-							+ " is not in the original word the same amount of times \nthat it shows up in the comparative word(s).");
+							+ " is not in the original word the same amount of times"
+							+ " \nthat it shows up in the comparative word(s).");
 					System.exit(0);
 				}
 			}
@@ -63,6 +64,7 @@ public class problemTwoAnagrams {
 					+ " is not an anagram because they are not the same length.");
 			System.exit(0);
 		}
-		System.out.println("The word " + anagramWord + " is an anagram in comparison to " + comparativeWord + " while ignoring white space.");
+		System.out.println("The word " + anagramWord + " is an anagram in comparison to " + comparativeWord
+				+ " while ignoring white space.");
 	}
 }
