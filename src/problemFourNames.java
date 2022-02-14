@@ -1,4 +1,3 @@
-
 public class problemFourNames {
 	public static void main(String[] args) {
 		String paragraph = ("Once there was a woman name:angelina: and a man name:tony: and their friend name:jane:");

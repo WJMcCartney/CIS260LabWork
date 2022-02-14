@@ -48,24 +48,22 @@ public class problemTwoAnagrams {
 				comparativeWordList.add(originalAnLetter);
 			}
 		}
-		for (int i = 0; i < comparativeWordList.size() && i < anagramWordList.size(); i += 1) {
-			char currentComparativeLetterChar = comparativeWordList.get(i);
-			char currentAnagramWordChar = anagramWordList.get(i);
-			String currentComparativeLetter = Character.toString(currentComparativeLetterChar);
-			String currentAnagramWord = Character.toString(currentAnagramWordChar);
-			if (currentComparativeLetter.equalsIgnoreCase(currentAnagramWord)) {
-				isAnagram += 1;
-			} else {
-				notAnagram += 1;
+		if (comparativeWordList.size() == anagramWordList.size()) {
+			for (int i = 0; i < comparativeWordList.size(); i += 1) {
+				char currentComparativeLetterChar = comparativeWordList.get(i);
+				int comparativeIndexMatch = anagramWordList.indexOf(currentComparativeLetterChar);
+				System.out.println(comparativeIndexMatch);
+				if (comparativeIndexMatch != -1) {
+					anagramWordList.remove(comparativeIndexMatch);
+				} else {
+					System.out.println("The word " + anagramWord + " and the word " + comparativeWord + " is not an anagram because the letter " + currentComparativeLetterChar + " is not in the original word the same amount of times \nthat it shows up in the comparative word(s).");
+					System.exit(0);
+				}
 			}
-
-		}
-		System.out.println("there are " + isAnagram + " letters that are matching and there are " + notAnagram
-				+ " letters that are not matching.");
-		if (isAnagram > notAnagram) {
-			System.out.println("The word " + anagramWord + " is an anagram in comparison to " + comparativeWord);
 		} else {
-			System.out.println("The word " + anagramWord + " is not an anagram in comparison to " + comparativeWord);
+			System.out.println("The word " + anagramWord + " and the word " + comparativeWord + " is not an anagram because they are not the same length.");
+			System.exit(0);
 		}
+			System.out.println("The word " + anagramWord + " is an anagram in comparison to " + comparativeWord);
 	}
 }
