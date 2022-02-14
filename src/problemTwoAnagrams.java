@@ -3,17 +3,13 @@ import java.util.ArrayList;
 
 public class problemTwoAnagrams {
 	public static void main(String[] Args) {
-		ArrayList<Character> comparativeWordList = new ArrayList<Character>();
+		ArrayList<Character> comparativeWordList = new ArrayList<Character>(); 
 		ArrayList<Character> anagramWordList = new ArrayList<Character>();
 		Scanner input = new Scanner(System.in);
-		int isAnagram = 0;
-		int notAnagram = 0;
 		System.out.print("Enter a word here: ");
-		String anagramWordUntrimmed = input.nextLine();
+		String anagramWord = input.nextLine();
 		System.out.print("Print the word(s) you think might fit into that word: ");
-		String comparativeWordUntrimmed = input.nextLine();
-		String anagramWord = anagramWordUntrimmed.trim();
-		String comparativeWord = comparativeWordUntrimmed.trim();
+		String comparativeWord = input.nextLine();
 		input.close();
 		char[] anagramWordListUntrimmed = anagramWord.toCharArray();
 		char[] comparativeWordListUntrimmed = comparativeWord.toCharArray();
@@ -56,14 +52,17 @@ public class problemTwoAnagrams {
 				if (comparativeIndexMatch != -1) {
 					anagramWordList.remove(comparativeIndexMatch);
 				} else {
-					System.out.println("The word " + anagramWord + " and the word " + comparativeWord + " is not an anagram because the letter " + currentComparativeLetterChar + " is not in the original word the same amount of times \nthat it shows up in the comparative word(s).");
+					System.out.println("The word " + anagramWord + " and the word " + comparativeWord
+							+ " is not an anagram because the letter " + currentComparativeLetterChar
+							+ " is not in the original word the same amount of times \nthat it shows up in the comparative word(s).");
 					System.exit(0);
 				}
 			}
 		} else {
-			System.out.println("The word " + anagramWord + " and the word " + comparativeWord + " is not an anagram because they are not the same length.");
+			System.out.println("The word " + anagramWord + " and the word " + comparativeWord
+					+ " is not an anagram because they are not the same length.");
 			System.exit(0);
 		}
-			System.out.println("The word " + anagramWord + " is an anagram in comparison to " + comparativeWord);
+		System.out.println("The word " + anagramWord + " is an anagram in comparison to " + comparativeWord + " while ignoring white space.");
 	}
 }
