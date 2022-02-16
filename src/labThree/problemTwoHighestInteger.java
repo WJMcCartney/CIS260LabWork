@@ -18,7 +18,8 @@ public class problemTwoHighestInteger {
 		}
 		System.out.println(takenInputs);
 		takenInputs.sort(null);
-		int largestNumber = takenInputs.get(takenInputs.size()-1);
+		int largestNumber = takenInputs.get(takenInputs.size() - 1);
 		System.out.print("The largest number is " + largestNumber);
+		System.exit(0);
 	}
 }

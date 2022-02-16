@@ -18,7 +18,7 @@ public class problemThreeSkippingNumbers {
 			}
 			System.out.println("The (" + counterI + ") input is " + takenInputs.get(i));
 		}
-
+		System.exit(0);
 	}
 
 }
