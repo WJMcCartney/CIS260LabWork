@@ -5,7 +5,7 @@ import java.util.ArrayList;
 //next time just create an array with size n rather than using arrayList as to make the code cleaner
 public class problemOneLoops {
 	public static void main(String args[]) {
-		int sum = 0;
+		int sum = 0; //next time init in when used rather than outside
 		ArrayList<Integer> takenInputs = new ArrayList<Integer>();
 		for (int i = 0; i < 10; i++) {
 			int counterI = i + 1;
