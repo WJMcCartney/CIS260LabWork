@@ -3,7 +3,7 @@ package labThree;
 import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
-
+//next time just create an array with size n rather than using arrayList as to make the code cleaner
 public class problemThreeSkippingNumbers {
 
 	public static void main(String[] args) {
